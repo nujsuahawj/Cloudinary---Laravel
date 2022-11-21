@@ -19,7 +19,7 @@ class ProductoController extends Controller
     {
         // dd($request);
               $file = request()->file('imagen');
-              $obj = Cloudinary::upload($file->getRealPath(),['folder'=>'products']);
+              $obj = Cloudinary::upload($file->getRealPath(),['folder'=>'picture']);
               $public_id = $obj->getPublicId();
               $url = $obj->getSecurePath();
 
